@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ca"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
-<title>Compres en pilot automàtic · Demo Daunis v15</title>
+<title>Compres en pilot automàtic · Demo Daunis v16</title>
 <style>:root{--bg:#f4f5f8;--card:#fff;--ink:#1c2b43;--mute:#667085;--line:#e3e7ee;--red:#e2241d;--navy:#172c65;--blubg:#e9edf9;--redbg:#fdebea;--amb:#9a5b00;--ambbg:#fff3df;--grn:#17663a;--grnbg:#e4f5ea}
 *{box-sizing:border-box}html,body{margin:0}
 body{font:14px/1.45 "Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
@@ -57,7 +57,9 @@ td,th{padding:8px 5px}}
 @media(max-width:1150px){.hero{grid-template-columns:1fr 1fr;padding:20px;gap:18px}.hero h2{font-size:22px}.stage{padding:10px 8px}.mailitem{flex-wrap:wrap}.mailitem>span:last-child{margin-left:22px}.mailitem .b{min-width:65%}}
 @media(max-width:650px){h1{font-size:21px}.hero{grid-template-columns:1fr;padding:20px;gap:12px}.hero h2{font-size:25px}.hero p{font-size:13px}.cycle{gap:7px}.stage{min-height:86px}.stage b{font-size:11px}.hero .act{flex-direction:column}.hero .btn{width:100%}.mini2{grid-template-columns:1fr}.heading{gap:4px}.heading>.btn{margin-bottom:12px}.kpi b{font-size:26px}.card{padding:13px}.mailitem{gap:8px;padding:14px 0}.mailitem .b{min-width:72%}.mailitem>span:last-child{margin-left:18px}.panel{padding:17px 16px 90px}.panel h2{max-width:90%;font-size:18px}.sub{font-size:13px}.topbar .version{font-size:10px}.tools .small{font-size:11px}.banner{line-height:1.5}.kpi span{font-size:11px}.tabs button{padding:9px 10px}nav.mob a{font-size:10px;min-height:42px}.mailbody{font-size:12px}}
 
-</style><style>/* v15: tabla de proveïdors en iPhone, una tarjeta por fila, con todas las columnas */
+</style><style>/* v16: pestanyes de Més visibles a l'iPhone sense lliscar */
+@media(max-width:700px){.tabs{flex-wrap:wrap;overflow:visible}.tabs button{padding:9px 10px}}
+/* v15: tabla de proveïdors en iPhone, una tarjeta por fila, con todas las columnas */
 @media(max-width:700px){table.provt,table.provt tbody,table.provt tr,table.provt td{display:block;width:100%}table.provt thead{display:none}table.provt tr{padding:12px 4px;border-bottom:1px solid var(--line)}table.provt td{padding:3px 4px;border:0;display:flex;justify-content:space-between;gap:12px;align-items:center}table.provt td.hide-m{display:flex}table.provt td:first-child{display:block}table.provt td:nth-child(2)::before{content:"Àrea";color:var(--mute);font-size:11px;text-transform:uppercase}table.provt td:nth-child(3)::before{content:"Termini hab.";color:var(--mute);font-size:11px;text-transform:uppercase}table.provt td:nth-child(4)::before{content:"Puntualitat (fictícia)";color:var(--mute);font-size:11px;text-transform:uppercase;white-space:nowrap}table.provt td:nth-child(4){display:block}table.provt td:nth-child(4)::before{display:block;margin-bottom:4px}table.provt td:nth-child(5)::before{content:"Obertes";color:var(--mute);font-size:11px;text-transform:uppercase}}
 /* v12: menos repetición, decisiones primero. */
 @media(min-width:901px){.topbar #tl{display:none}}
@@ -65,7 +67,7 @@ td,th{padding:8px 5px}}
 @media(max-width:900px){.topbar .pill{display:inline-block;font-size:9px;padding:3px 7px;white-space:nowrap}.topbar .version{display:none}.topbar #tl{height:25px;width:128px}.apcontrols{gap:7px}.apcontrols .mxbtn{padding:8px 10px;font-size:12px}.apcontrols .mxmeta{font-size:10px}.aphero{padding:19px}.aphero h1{font-size:26px}.aphero p{font-size:13px}.apdemof{align-items:flex-start;font-size:11px}}
 </style></head><body>
 <div class="app"><aside id="side"></aside><main>
-<div class="topbar"><img id="tl" alt="Daunis"><span class="version">AUTOMIO · COMPRES v15</span><span class="sp"></span><span class="pill">DEMO · DADES FICTÍCIES</span></div>
+<div class="topbar"><img id="tl" alt="Daunis"><span class="version">AUTOMIO · COMPRES v16</span><span class="sp"></span><span class="pill">DEMO · DADES FICTÍCIES</span></div>
 
 <div id="view"></div></main></div>
 <nav class="mob" id="mob"></nav><div class="drawer" id="dr"><div class="panel" id="pn"></div></div><div class="toast" id="toast"></div>
