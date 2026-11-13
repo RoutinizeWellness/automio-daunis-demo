@@ -1,20 +1,22 @@
-# Demo de compres per a Daunis (v6)
+# Demo de compres per a Daunis · v7
 
-Demo il·lustrativa en català. Totes les dades operatives són fictícies. No hi ha connexió amb ERP ni correu. Les decisions, esborranys i recepcions es guarden només al navegador. La pàgina porta `noindex,nofollow` (no restringeix l'accés).
+Prototip independent en català. Dades operatives fictícies, ERP i correu desconnectats. No s’envia cap correu ni es modifica cap sistema. Classificació i resposta predeterminades, sense model d’IA real. Persistència només al navegador.
 
-Concepte: una capa lleugera per a Compres que **complementa l'ERP**. Llegeix comandes i correu, els creua i deixa només el que cal decidir.
+## Quatre entrades
 
-## Pantalles
-1. **Avui**: cua de feina per urgència.
-2. **Bústia de compres**: triatge del correu de proveïdors, lligat a cada comanda, amb esborrany editable.
-3. **Comandes**: filtres, detall, historial, recepció parcial i reclamació editable.
-4. **Més**: proveïdors, compres sota comanda del client, abast i fonts.
+- **Avui:** cicle automàtic de reclamació, lectura de resposta, confirmació de data/preu/quantitat i tancament verificat. La comanda continua oberta fins a recepció física.
+- **Bústia de compres:** 12 correus de mostra, classificació, vinculació i acció. Confirmacions, parcials, factures, documents, duplicats i excepcions.
+- **Comandes:** cerca i filtres, línies, quantitats i recepcions, correu vinculat.
+- **Més:** autonomia, límits, pausa, simulació de fallada ERP, registre d’accions, proveïdors, compres sota comanda i abast.
 
-## Guió de 3 minuts
-1. Avui: veure la cua. Obrir "Confirmació PC-26-0451".
-2. Bústia: canvi de preu i data alhora. Editar l'esborrany i desar-lo.
-3. Bústia: factura F-8841 amb 42 € de transport no pactat.
-4. Comandes: PC-26-0425, Recepció de 2 unitats amb albarà. El pendent es recalcula.
-5. Més, Sota comanda del client: compres amb risc d'anul·lació.
+## Guió curt
 
-Context públic i fonts: `REA-Daunis.md`. Logotip de daunis.es, només per a aquesta presentació. Demo independent, no és un producte oficial de Daunis.
+1. A Avui, prémer **Simular cicle automàtic**. Es mostren els 6 passos sense aprovació d’enviament en mode automàtic.
+2. Obrir **Veure correus i evidències**. Comparar abans/després i ACK simulat de l’ERP.
+3. **Simular triaje de 12 correus**: amb les regles inicials, 7 casos segurs i 5 excepcions fictícies. No són resultats de Daunis.
+4. Obrir el preu +7 %: el sistema no l’accepta i prepara una contraproposta editable.
+5. A Més → Autonomia, provar observació, aprovació opcional, límit de dies i error de connector. Sense ACK no es tanca la reclamació; el reintent no reenvia el correu.
+
+La demo pot il·lustrar un flux complet de compres, però la integració i l’autonomia real requereixen validar API de l’ERP, permisos, identitats, regles comercials i pilot mesurat. No és una promesa de precisió, estalvi ni viabilitat tècnica.
+
+Logotip públic de daunis.es utilitzat només per a aquesta presentació. No és un producte oficial de Daunis. Pàgina pública amb noindex/nofollow, que no restringeix l’accés.
