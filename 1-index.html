@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ca"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Compres · Capa sobre l'ERP · Demo per a Daunis</title>
+<style>:root{--bg:#f4f5f8;--card:#fff;--ink:#1c2b43;--mute:#667085;--line:#e3e7ee;--red:#e2241d;--navy:#172c65;--blubg:#e9edf9;--redbg:#fdebea;--amb:#9a5b00;--ambbg:#fff3df;--grn:#17663a;--grnbg:#e4f5ea}
+*{box-sizing:border-box}html,body{margin:0}
+body{font:14px/1.45 "Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:100vh}
+aside{background:#fff;border-right:1px solid var(--line);padding:20px 12px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:3px}
+.brand{padding:2px 10px 14px;border-bottom:1px solid var(--line);margin-bottom:10px}.brand img{height:30px;display:block}.brand small{display:block;margin-top:10px;font-size:10px;letter-spacing:.12em;color:#7d8797;font-weight:600}
+aside a{display:flex;align-items:center;gap:8px;color:#2c3a54;text-decoration:none;padding:10px 12px;border-radius:8px;cursor:pointer;border-left:3px solid transparent;font-weight:500}
+aside a:hover{background:#f4f6fa}aside a.on{background:var(--blubg);color:var(--navy);font-weight:700;border-left-color:var(--red)}
+.n{margin-left:auto;background:var(--red);color:#fff;border-radius:99px;font-size:11px;padding:0 7px;line-height:18px;font-weight:600}
+.side-foot{margin-top:auto;font-size:11.5px;color:var(--mute);border-top:1px solid var(--line);padding:12px 8px}
+.side-foot i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#1f9d55;margin-right:5px}
+main{padding:0 26px 40px;min-width:0}
+.topbar{height:60px;display:flex;align-items:center;gap:12px;background:#fff;border-bottom:1px solid var(--line);margin:0 -26px 18px;padding:0 26px}
+.topbar img{height:26px}.topbar .sp{flex:1}.pill{font-size:11px;font-weight:700;letter-spacing:.06em;background:var(--ambbg);color:var(--amb);border:1px solid #f1d19a;border-radius:99px;padding:3px 10px}
+h1{font-size:21px;margin:0;color:var(--navy)}h2{font-size:15px;margin:0 0 10px;color:var(--navy)}.sub{color:var(--mute);margin:2px 0 16px}
+.banner{background:var(--ambbg);color:#6b4100;border:1px solid #f1d19a;border-radius:8px;padding:7px 12px;font-size:12px;margin-bottom:16px}
+.grid{display:grid;gap:14px}.k4{grid-template-columns:repeat(4,1fr)}.two{grid-template-columns:1.5fr 1fr}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;min-width:0}
+.kpi{cursor:pointer;border-top:3px solid var(--line)}.kpi:hover{border-color:var(--navy)}.kpi b{font-size:28px;display:block;line-height:1.1}.kpi span{color:var(--mute);font-size:12.5px}
+.kpi.bad{border-top-color:var(--red)}.kpi.bad b{color:var(--red)}.kpi.warn{border-top-color:#e8890c}.kpi.warn b{color:var(--amb)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+input,select,textarea{font:inherit;border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:#fff;color:var(--ink)}input[type=search]{min-width:230px;flex:1}
+.chip{border:1px solid var(--line);background:#fff;border-radius:99px;padding:5px 12px;cursor:pointer;font:inherit;font-size:13px;color:var(--ink)}.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+button.btn{font:inherit;font-size:13px;border:1px solid var(--red);background:var(--red);color:#fff;border-radius:8px;padding:7px 13px;cursor:pointer}button.btn.ghost{background:#fff;color:var(--navy);border-color:#c9d0e0}
+table{width:100%;border-collapse:collapse}th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);text-align:left;padding:8px;border-bottom:1px solid var(--line);white-space:nowrap;background:#f8f9fb}
+td{padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:middle}tr.row{cursor:pointer}tr.row:hover td{background:#f8f9fc}.tw{overflow-x:auto}
+.tag{display:inline-block;border-radius:99px;padding:2px 9px;font-size:12px;font-weight:600;white-space:nowrap}
+.t-red{background:var(--redbg);color:#b42318}.t-amb{background:var(--ambbg);color:var(--amb)}.t-grn{background:var(--grnbg);color:var(--grn)}.t-blu{background:var(--blubg);color:var(--navy)}.t-gry{background:#eef0f3;color:#475467}
+.mut{color:var(--mute)}.small{font-size:12.5px}.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px}
+.item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:flex-start;cursor:pointer}.item:last-child{border:0}.item:hover{background:#fafbfd}
+.dot{width:10px;height:10px;border-radius:50%;margin-top:6px;flex:none}.d-red{background:var(--red)}.d-amb{background:#e8890c}.d-blu{background:var(--navy)}.d-gry{background:#a7b0bf}.d-grn{background:#1f9d55}
+.item .b{flex:1;min-width:0}.src{font-size:11px;background:#eef0f3;border-radius:4px;padding:0 5px;margin-left:4px;color:#444}
+.diff{background:#fff8e6;border:1px solid #f1d19a;border-radius:8px;padding:6px 10px;margin-top:6px;font-size:12.5px}.diff s{color:#a33}.diff b{color:var(--grn)}
+.sugg{background:var(--blubg);border-radius:8px;padding:9px 12px;margin:10px 0;font-size:13px}
+.drawer{position:fixed;inset:0;background:rgba(10,20,40,.45);display:none;z-index:20}.drawer.on{display:block}
+.panel{position:absolute;right:0;top:0;bottom:0;width:min(580px,100%);background:#fff;padding:20px;overflow:auto}
+.x{float:right;border:0;background:#eef0f3;border-radius:8px;width:34px;height:34px;font-size:18px;cursor:pointer}
+.tl{margin:8px 0 0;padding:0;list-style:none;border-left:2px solid var(--line)}.tl li{padding:0 0 10px 14px;position:relative;font-size:13px}.tl li:before{content:"";position:absolute;left:-6px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--navy)}
+textarea{width:100%;min-height:150px}.act{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.kv{display:grid;grid-template-columns:120px 1fr;gap:5px 10px;margin:12px 0}.kv div:nth-child(odd){color:var(--mute)}
+.tabs{display:flex;gap:6px;margin-bottom:14px;border-bottom:1px solid var(--line)}.tabs button{border:0;background:none;font:inherit;padding:9px 14px;cursor:pointer;color:var(--mute);border-bottom:3px solid transparent}.tabs button.on{color:var(--navy);font-weight:700;border-bottom-color:var(--red)}
+.bar{height:7px;background:#eceef2;border-radius:99px;overflow:hidden;min-width:70px}.bar i{display:block;height:100%;background:var(--navy)}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#172c65;color:#fff;padding:9px 16px;border-radius:8px;font-size:13px;z-index:40;display:none}
+.src-list a{color:var(--navy)}.src-list li{margin:4px 0}
+nav.mob{display:none}.mtop{display:none}
+@media(max-width:900px){.app{display:block}aside{display:none}main{padding:0 12px 90px}.topbar{margin:0 -12px 14px;padding:0 12px;height:52px}.topbar .pill{display:none}
+.k4{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.hide-m{display:none}input[type=search]{min-width:0;width:100%}.kv{grid-template-columns:100px 1fr}
+nav.mob{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);z-index:10;justify-content:space-around;padding:6px 0 calc(6px + env(safe-area-inset-bottom))}
+nav.mob a{color:#444;text-decoration:none;font-size:11px;text-align:center;padding:6px 2px;flex:1;border-top:3px solid transparent}nav.mob a.on{color:var(--navy);font-weight:700;border-top-color:var(--red)}
+td,th{padding:8px 5px}}
+</style></head><body>
+<div class="app"><aside id="side"></aside><main>
+<div class="topbar"><img id="tl" alt="Daunis"><span class="sp"></span><span class="pill">DEMO · DADES FICTÍCIES</span></div>
+<div class="banner"><b>Entorn de demostració.</b> Dades fictícies · ERP i correu desconnectats · No s'envia res</div>
+<div id="view"></div></main></div>
+<nav class="mob" id="mob"></nav><div class="drawer" id="dr"><div class="panel" id="pn"></div></div><div class="toast" id="toast"></div>
+<script>
+const LOGO='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTk1IiBoZWlnaHQ9IjM4IiB2aWV3Qm94PSIwIDAgMTk1IDM4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNzAuMjA2NyAxNi44NTM3QzcwLjIwNjcgMjAuMjc0NSA2OS43MTQ2IDIzLjIzMTEgNjguNzM0NCAyNS43MjE0QzY3Ljc1NDIgMjguMjExOCA2Ni4zNDgyIDMwLjI2ODMgNjQuNTE2MyAzMS44ODQ5QzYyLjY4NDUgMzMuNTAxNCA2MC40NjUgMzQuNzEwMyA1Ny44NTU4IDM1LjUwOTRDNTUuMjQ2NiAzNi4zMDg2IDUyLjMxNCAzNi43MDgyIDQ5LjA1ODEgMzYuNzA4Mkg0MC4wMDkzTDQzLjUwNjMgMy4yNDU0SDUxLjk5ODdDNTQuNDc3MyAzLjI0NTQgNTYuODE5MyAzLjM5NDc0IDU5LjAyMDggMy42OTE0MUM2MS4yMjIyIDMuOTkwMDkgNjMuMTU2NSA0LjYxMTY4IDY0LjgyMTYgNS41NTgxOUM2Ni40ODY4IDYuNTA2NzEgNjcuODAwNCA3Ljg4MzA5IDY4Ljc2MjUgOS42ODUyOUM2OS43MjQ3IDExLjQ4OTUgNzAuMjA2NyAxMy44NzkgNzAuMjA2NyAxNi44NTE3VjE2Ljg1MzdaTTYzLjg3OTYgMTcuNjM0N0M2My44Nzk2IDE1LjMzIDYzLjQ2MzggMTMuNTM1OSA2Mi42MzAzIDEyLjI1MjRDNjEuNzk2NyAxMC45NzA4IDYwLjY5NiAxMC4wMTQyIDU5LjMyNjEgOS4zODA1NUM1Ny45NTgyIDguNzQ4ODcgNTYuNDAzNiA4LjM1NzM1IDU0LjY2NDEgOC4yMTAwM0M1Mi45MjQ2IDguMDYwNjggNTEuMTQ5IDcuOTg2MDEgNDkuMzM1MyA3Ljk4NjAxTDQ2Ljc4MjMgMzEuOTY5Nkg0Ny43MjY0QzUwLjIwNSAzMS45Njk2IDUyLjQ0NDYgMzEuNzI3NCA1NC40NDMyIDMxLjI0MzFDNTYuNDQxNyAzMC43NjA3IDU4LjEzNSAyOS45NjE2IDU5LjUyMjkgMjguODQ1NUM2MC45MTA5IDI3LjcyOTUgNjEuOTgzNSAyNi4yNjIzIDYyLjc0MjcgMjQuNDM5OUM2My41IDIyLjYxNzUgNjMuODgxNiAyMC4zNDkxIDYzLjg4MTYgMTcuNjM0N0g2My44Nzk2WiIgZmlsbD0iIzFDMUMxQyIvPgo8cGF0aCBkPSJNOTYuMjkyNiAzNi43MDgySDkwLjI0MjdMOTEuMzUzNCAyNi43MjQ1QzkwLjgzMzIgMjcuNzY3OCA5MC4xNjAzIDI4Ljg4MTkgODkuMzI2NyAzMC4wNzA2Qzg4LjQ5NTIgMzEuMjYxMyA4Ny41NjkyIDMyLjM1NzEgODYuNTUwOCAzMy4zNjIxQzg1LjUzMjUgMzQuMzY1MiA4NC40MjM3IDM1LjIwMjcgODMuMjIwNiAzNS44NzI3QzgyLjAxNzQgMzYuNTQyNyA4MC43ODgxIDM2Ljg3NTcgNzkuNTMwNyAzNi44NzU3Qzc4LjI3MzMgMzYuODc1NyA3Ny4yMTY4IDM2LjcwMDEgNzYuMzY3MiAzNi4zNDVDNzUuNTE1NSAzNS45OTE4IDc0LjgzMDYgMzUuNDg5MyA3NC4zMTI0IDM0LjgzOTRDNzMuNzk0MSAzNC4xODk2IDczLjQyNDYgMzMuMzk4NSA3My4yMDM2IDMyLjQ3MDFDNzIuOTgwNyAzMS41Mzk4IDcyLjg3MDIgMzAuNDk4NCA3Mi44NzAyIDI5LjM0NkM3Mi44NzAyIDI2Ljc0NDcgNzMuMTgzNSAyNC4zMDg4IDczLjgxMjIgMjIuMDM4M0M3NC40NDA5IDE5Ljc3MiA3NS40MTMxIDE3LjgwMDIgNzYuNzI2NyAxNi4xMjcyQzc4LjA0MDMgMTQuNDU0MiA3OS43MTU1IDEzLjEzNjMgODEuNzUwMiAxMi4xNjc2QzgzLjc4NSAxMS4yMDI5IDg2LjIwOTQgMTAuNzE4NiA4OS4wMjE0IDEwLjcxODZDOTAuNjg2NiAxMC43MTg2IDkyLjM1MTcgMTAuNzU0OSA5NC4wMTY4IDEwLjgyOTZDOTUuNjgyIDEwLjkwNDMgOTcuMzQ3MSAxMS4wMTczIDk5LjAxMjIgMTEuMTY0Nkw5Ni4yOTA2IDM2LjcwODJIOTYuMjkyNlpNOTIuNDYyMiAxNS41MTM3QzkxLjg3MTYgMTUuNDAyNyA5MS4yNzkxIDE1LjMxMTkgOTAuNjg2NiAxNS4yMzUyQzkwLjA5NCAxNS4xNjA1IDg5LjUwMTUgMTUuMTIyMiA4OC45MDg5IDE1LjEyMjJDODYuOTg0NyAxNS4xMjIyIDg1LjM4MzggMTUuNDc3NCA4NC4xMDg0IDE2LjE4MzdDODIuODMwOSAxNi44OTQxIDgxLjgxNDUgMTcuODQ0NiA4MS4wNTUzIDE5LjAzNzRDODAuMjk4IDIwLjIzMjEgNzkuNzU5NyAyMS42MDI0IDc5LjQ0NjQgMjMuMTUwM0M3OS4xMzEgMjQuNzAwMyA3OC45NzQzIDI2LjMxMjggNzguOTc0MyAyNy45ODk4Qzc4Ljk3NDMgMjguNTEyNSA3OS4wMTA1IDI5LjAxNTEgNzkuMDg2OCAyOS41MDE0Qzc5LjE1OTEgMjkuOTg1OCA3OS4zMDc4IDMwLjQyNTcgNzkuNTMwNyAzMC44MTczQzc5Ljc1MTcgMzEuMjA4OCA4MC4wNDkgMzEuNTI3NyA4MC40MTg1IDMxLjc2NzhDODAuNzg4MSAzMi4wMSA4MS4yODgzIDMyLjEzMzEgODEuOTE3IDMyLjEzMzFDODIuNzY4NiAzMi4xMzMxIDgzLjYxMDIgMzEuODUyNiA4NC40NDM4IDMxLjI5MzVDODUuMjc3NCAzMC43MzQ1IDg2LjA3MDggMzAuMDA2IDg2LjgzIDI5LjExMTlDODcuNTg3MyAyOC4yMTU5IDg4LjI5MjMgMjcuMjA4OCA4OC45MzkxIDI2LjA5MDhDODkuNTg1OCAyNC45NzA3IDkwLjE2MDMgMjMuODQyNiA5MC42NTg0IDIyLjcwNDNDOTEuMTU4NiAyMS41NjYxIDkxLjU1NDMgMjAuNDc2MyA5MS44NTE2IDE5LjQzMDlDOTIuMTQ2OCAxOC4zODc1IDkyLjMzMTYgMTcuNDg5NSA5Mi40MDU5IDE2Ljc0NDhDOTIuNDQyMSAxNi41NTkxIDkyLjQ2MDIgMTYuMzUzMiA5Mi40NjAyIDE2LjEyOTJWMTUuNTEzN0g5Mi40NjIyWiIgZmlsbD0iIzFDMUMxQyIvPgo8cGF0aCBkPSJNMTI2LjQzNCAzNi43MDgySDEyMC4zODRMMTIxLjQ5NSAyNi42MTM1QzEyMC45NzQgMjcuNTgwMiAxMjAuMjkxIDI4LjY1NzkgMTE5LjQ0IDI5Ljg0ODZDMTE4LjU4OCAzMS4wMzkzIDExNy42NDQgMzIuMTUzMyAxMTYuNjEgMzMuMTk0NkMxMTUuNTczIDM0LjIzNiAxMTQuNDYyIDM1LjEwOTkgMTEzLjI3OSAzNS44MTYyQzExMi4wOTYgMzYuNTIyNSAxMTAuODkzIDM2Ljg3NTcgMTA5LjY3MiAzNi44NzU3QzEwOC42NzQgMzYuODc1NyAxMDcuNzU4IDM2LjgwMTEgMTA2LjkyNCAzNi42NTM3QzEwNi4wOTEgMzYuNTA0NCAxMDUuMzggMzYuMjM2IDEwNC43ODUgMzUuODQ0NUMxMDQuMTk0IDM1LjQ1NSAxMDMuNzM4IDM0Ljg5NzkgMTAzLjQyNSAzNC4xNzE0QzEwMy4xMSAzMy40NDY5IDEwMi45NTMgMzIuNTA4NSAxMDIuOTUzIDMxLjM1NjFDMTAyLjk1MyAzMC41MDA0IDEwMy4wMDkgMjkuNjQ2NyAxMDMuMTIgMjguNzkxTDEwNS4wMDggMTAuNzIwNkgxMTEuMDU4TDEwOS4zOTMgMjcuMTE4QzEwOS4zNTcgMjcuNDUzIDEwOS4zMTggMjcuNzk2MSAxMDkuMjggMjguMTQ5M0MxMDkuMjQ0IDI4LjUwNDUgMTA5LjIyNiAyOC44NDc2IDEwOS4yMjYgMjkuMTgwNUMxMDkuMjI2IDMwLjIyMTkgMTA5LjQ0NyAzMC44ODk5IDEwOS44OTMgMzEuMTg4NkMxMTAuMzM3IDMxLjQ4NzMgMTExLjA0IDMxLjYzNDYgMTEyLjAwMiAzMS42MzQ2QzExMy4yOTUgMzEuNjM0NiAxMTQuNTQ1IDMxLjA2NzUgMTE1Ljc0OCAyOS45MzMzQzExNi45NDkgMjguNzk5MSAxMTguMDMyIDI3LjQzMjggMTE4Ljk5NiAyNS44MzQ1QzExOS45NTYgMjQuMjM2MSAxMjAuNzUzIDIyLjU5OTQgMTIxLjM4MiAyMC45MjYzQzEyMi4wMTEgMTkuMjUzMyAxMjIuMzggMTcuODU4OCAxMjIuNDkzIDE2Ljc0MjdMMTIzLjEwMSAxMC43MTg2SDEyOS4xNTNMMTI2LjQzMiAzNi43MDgySDEyNi40MzRaIiBmaWxsPSIjMUMxQzFDIi8+CjxwYXRoIGQ9Ik0xNTguNzM4IDE2LjA3NDhWMTcuMzU2M0MxNTguNzM4IDE3LjgwMjMgMTU4LjcwMiAxOC4yMzIxIDE1OC42MjYgMTguNjM5OEwxNTYuNzQgMzYuNzEwM0gxNTAuNjM0TDE1Mi4zNTUgMjAuMzEyOUMxNTIuMzg5IDE5Ljk3NzggMTUyLjQxNyAxOS42MzQ4IDE1Mi40MzkgMTkuMjgxNkMxNTIuNDU3IDE4LjkyODQgMTUyLjQ2NSAxOC41ODUzIDE1Mi40NjUgMTguMjUwM0MxNTIuNDY1IDE3LjIwOSAxNTIuMjQ0IDE2LjU0MDkgMTUxLjc5OSAxNi4yNDIzQzE1MS4zNTUgMTUuOTQzNiAxNTAuNjUyIDE1Ljc5NjMgMTQ5LjY4OSAxNS43OTYzQzE0OC4zOTIgMTUuNzk2MyAxNDcuMTUzIDE2LjMwODkgMTQ1Ljk3IDE3LjMzQzE0NC43ODYgMTguMzUzMiAxNDMuNzE0IDE5LjU5NjQgMTQyLjc1IDIxLjA2NTZDMTQxLjc4OCAyMi41MzQ4IDE0MSAyNC4wNTg1IDE0MC4zOSAyNS42Mzg3QzEzOS43ODEgMjcuMjIxIDEzOS40MTkgMjguNTY3MSAxMzkuMzA3IDI5LjY4MzFMMTM4LjY0IDM2LjcxMDNIMTMyLjUzNkwxMzMuODk2IDIzLjcxNTRMMTM1LjI1NiAxMC43MjA2SDE0MS4zNjJMMTQwLjM2NCAxOS44MTAzQzE0MC45MTggMTguODgyIDE0MS42MTMgMTcuODY2OSAxNDIuNDQ0IDE2Ljc3MUMxNDMuMjc4IDE1LjY3NTIgMTQ0LjIxMiAxNC42NzIxIDE0NS4yNDYgMTMuNzU5OUMxNDYuMjgzIDEyLjg0OTggMTQ3LjM4NCAxMi4wODY5IDE0OC41NDkgMTEuNDc1NEMxNDkuNzE0IDEwLjg2MTkgMTUwLjg4OSAxMC41NTUxIDE1Mi4wNzQgMTAuNTU1MUMxNTMuMDcyIDEwLjU1NTEgMTUzLjk4OCAxMC42Mjk4IDE1NC44MjEgMTAuNzc3MUMxNTUuNjU1IDEwLjkyNjUgMTU2LjM1NiAxMS4xOTQ5IDE1Ni45MzEgMTEuNTg0NEMxNTcuNTAzIDExLjk3NTkgMTU3Ljk0OSAxMi41MzI5IDE1OC4yNjIgMTMuMjU3NEMxNTguNTc2IDEzLjk4NCAxNTguNzM0IDE0LjkyMjQgMTU4LjczNCAxNi4wNzQ4SDE1OC43MzhaIiBmaWxsPSIjMUMxQzFDIi8+CjxwYXRoIGQ9Ik0xNjguODQgMzYuNzA4MkgxNjIuNzM1TDE2NC4wOTUgMjMuNzEzNEwxNjUuNDU1IDEwLjcxODZIMTcxLjU2MUwxNjguODQgMzYuNzA4MlpNMTcyLjA1OSA1LjgxMDQ4SDE2NS45NTNMMTY2LjQ1MyAwLjk1ODg2MkgxNzIuNTZMMTcyLjA1OSA1LjgxMDQ4WiIgZmlsbD0iIzFDMUMxQyIvPgo8cGF0aCBkPSJNMTk0LjIwOCAxNS4xMjYyQzE5My4yMSAxNC45NDA1IDE5Mi4yMSAxNC44MTk0IDE5MS4yMTIgMTQuNzYyOUMxOTAuMjEzIDE0LjcwODQgMTg5LjE5NSAxNC42NzgyIDE4OC4xNTggMTQuNjc4MkMxODcuNTMgMTQuNjc4MiAxODYuODE3IDE0LjY5ODQgMTg2LjAyMSAxNC43MzQ3QzE4NS4yMjYgMTQuNzcxIDE4NC40NTcgMTQuOTAyMiAxODMuNzE3IDE1LjEyNDJDMTgyLjk3OCAxNS4zNDYyIDE4Mi4zNTggMTUuNjkxMyAxODEuODU5IDE2LjE1NTRDMTgxLjM1OSAxNi42MTk2IDE4MS4xMSAxNy4yOTc3IDE4MS4xMSAxOC4xODk3QzE4MS4xMSAxOS4wMDcxIDE4MS40MTUgMTkuNjMyNyAxODIuMDI2IDIwLjA1ODVDMTgyLjYzNSAyMC40ODY0IDE4My4zOTQgMjAuODQ3NiAxODQuMzAyIDIxLjE0NjNDMTg1LjIxIDIxLjQ0NSAxODYuMTkgMjEuNzIzNSAxODcuMjQ0IDIxLjk4MzhDMTg4LjI5OSAyMi4yNDQyIDE4OS4yNzkgMjIuNjE1NSAxOTAuMTg3IDIzLjA5OTlDMTkxLjA5MyAyMy41ODQyIDE5MS44NTIgMjQuMjEzOSAxOTIuNDYzIDI0Ljk5NDlDMTkzLjA3MyAyNS43NzU5IDE5My4zNzkgMjYuODM1NSAxOTMuMzc5IDI4LjE3MzVDMTkzLjM3OSAyOS45NTk1IDE5Mi45ODEgMzEuNDE4NyAxOTIuMTg2IDMyLjU1MjlDMTkxLjM4OCAzMy42ODcgMTkwLjM2MiAzNC41ODcxIDE4OS4xMDQgMzUuMjU3MkMxODcuODQ1IDM1LjkyNzIgMTg2LjQ1OSAzNi4zOTE0IDE4NC45NDEgMzYuNjUxN0MxODMuNDIyIDM2LjkxMiAxODEuOTQ0IDM3LjA0MTIgMTgwLjUgMzcuMDQxMkMxNzkuOTA3IDM3LjA0MTIgMTc5LjI1OCAzNy4wMzExIDE3OC41NTUgMzcuMDEyOUMxNzcuODUyIDM2Ljk5NDggMTc3LjEzOSAzNi45NTg1IDE3Ni40MTggMzYuOTAyQzE3NS42OTcgMzYuODQ1NCAxNzQuOTkyIDM2Ljc1MjYgMTc0LjMwOSAzNi42MjM0QzE3My42MjQgMzYuNDkyMyAxNzMuMDA1IDM2LjMzNDkgMTcyLjQ1MSAzNi4xNDkyTDE3Mi44MzkgMzIuMjQ0MUMxNzMuOTg2IDMyLjQzMTggMTc1LjEzMyAzMi41NzEgMTc2LjI4MSAzMi42NjE4QzE3Ny40MjYgMzIuNzU0NyAxNzguNTkzIDMyLjgwMzEgMTc5Ljc3OCAzMi44MDMxQzE4MC40NDUgMzIuODAzMSAxODEuMjEzIDMyLjc4NDkgMTgyLjA4MiAzMi43NDY2QzE4Mi45NTIgMzIuNzEwMyAxODMuNzY2IDMyLjU3MSAxODQuNTI1IDMyLjMyODhDMTg1LjI4MiAzMi4wODg3IDE4NS45MzEgMzEuNzE3MyAxODYuNDY3IDMxLjIxNDhDMTg3LjAwMyAzMC43MTIzIDE4Ny4yNzMgMjkuOTc3NyAxODcuMjczIDI5LjAxMUMxODcuMjczIDI4LjI2ODMgMTg2Ljk2NyAyNy43MDEyIDE4Ni4zNTcgMjcuMzA5N0MxODUuNzQ2IDI2LjkyMDIgMTg0Ljk4NyAyNi41NzcxIDE4NC4wODEgMjYuMjc4NEMxODMuMTczIDI1Ljk3OTggMTgyLjE5NSAyNS42ODMxIDE4MS4xMzggMjUuMzg0NEMxODAuMDg0IDI1LjA4NzcgMTc5LjEwNCAyNC42OTYyIDE3OC4xOTggMjQuMjEzOUMxNzcuMjkgMjMuNzMxNiAxNzYuNTMzIDIzLjA4OTggMTc1LjkyMiAyMi4yOTA2QzE3NS4zMTEgMjEuNDkzNCAxNzUuMDA2IDIwLjQyMzggMTc1LjAwNiAxOS4wODU4QzE3NS4wMDYgMTcuMzc2NCAxNzUuMzY4IDE1Ljk2MTcgMTc2LjA4OSAxNC44NDU3QzE3Ni44MSAxMy43MzE3IDE3Ny43NDQgMTIuODM3NiAxNzguODkxIDEyLjE2NzZDMTgwLjAzOCAxMS40OTc2IDE4MS4zMjMgMTEuMDI1MyAxODIuNzQ5IDEwLjc0NDhDMTg0LjE3MyAxMC40NjYzIDE4NS41ODkgMTAuMzI3MSAxODYuOTk1IDEwLjMyNzFDMTg3LjU1IDEwLjMyNzEgMTg4LjE2IDEwLjMzNzEgMTg4LjgyNyAxMC4zNTUzQzE4OS40OTQgMTAuMzc1NSAxOTAuMTY3IDEwLjQwOTggMTkwLjg1NCAxMC40NjgzQzE5MS41MzkgMTAuNTIyOCAxOTIuMjA0IDEwLjYxNzcgMTkyLjg1MyAxMC43NDY4QzE5My40OTkgMTAuODggMTk0LjA4MiAxMS4wMzU0IDE5NC42MDIgMTEuMjIxMUwxOTQuMjEyIDE1LjEyNDJMMTk0LjIwOCAxNS4xMjYyWiIgZmlsbD0iIzFDMUMxQyIvPgo8cGF0aCBkPSJNMzMuNDAzMiAzLjMzODI5SDAuMDEyMDQxNFYzNi44OTE5SDMzLjQwMzJWMy4zMzgyOVoiIGZpbGw9IiNFMjI0MUQiLz4KPHBhdGggZD0iTTE0Ljc5NTQgMTcuODQ0N0MxNC43OTU0IDE3LjQ5NTYgMTUuMDc2NiAxNy4yMTMxIDE1LjQyNjEgMTcuMjEzMUgxOC43OTI2QzE5LjE0MDEgMTcuMjEzMSAxOS40MjMzIDE3LjQ5NTYgMTkuNDIzMyAxNy44NDQ3VjIwLjI2ODVDMTkuNDIzMyAyMC42MTc3IDE5LjE0MjEgMjAuOTAwMiAxOC43OTI2IDIwLjkwMDJIMTUuNDI2MUMxNS4wNzg3IDIwLjkwMDIgMTQuNzk1NCAyMC42MTc3IDE0Ljc5NTQgMjAuMjY4NVYxNy44NDQ3WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTMzLjQwMzIgMjEuMzgyNVYxOS4yNDUzQzMwLjA3MjkgMjAuMDEyMiAyMS45NzAyIDIxLjg3MjkgMjIuMDA4NCAyMS44MDgzQzI2LjI3MDYgMTQuOTUwNyAyMy41ODMxIDEzLjE3ODggMjAuMDI1OSAxMi45MTY0VjYuMjQ4NDZIMjUuMTg0QzI1LjY5MjEgNi4yNDg0NiAyNi4xMDM5IDUuODM0NzQgMjYuMTAzOSA1LjMyNDE1VjMuMzM4MjlIOC4yODk1NFY1LjMyMjEzQzguMjg5NTQgNS44MzI3MiA4LjY5OTMgNi4yNDY0NCA5LjIxMzUgNi4yNDY0NEgxNC40NTJWMTMuMjU1NEMxNC40MTU4IDEzLjI1OTUgMTQuMzc1NiAxMy4yNjM1IDE0LjMzOTUgMTMuMjY5NkMxMC42NDU2IDEzLjkxNTQgMy44Njg1OSAxNi45NjI4IDIuNjMwODJlLTA3IDE4Ljg1MThWMjAuOTU2N0MzLjc3NDE4IDE5LjIwMjkgMTAuNDM2NyAxNi40NDgxIDEzLjA4NDEgMTUuNjE4N0MxNi4zNzgyIDE0LjU4NzQgMjEuMDc4NCAxMy43OTgzIDIyLjIxOTMgMTUuNjczMkMyMy40MzA0IDE3LjY3NzIgMTkuMjY4NiAyNC4wMDYxIDE5LjI2ODYgMjQuMDA2MUwzMy40MDMyIDIxLjM4MjVaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMzMuNDAzMiAyNy4yNjMzQzMwLjE4NzQgMjguMDcwNiAyMi43MTc0IDI5LjkzNzQgMjAuMjMwNyAzMC40NzgyQzE0LjU0ODQgMzEuNzE1NCAxMS4zNjA3IDMxLjg3NjggMTEuMjk4NCAyOS43OTYxQzExLjI1MDIgMjguMjA3OCAxMS44NTI4IDI2Ljg5NiAxMi4xNzgyIDI2LjE3MTVDMTIuODU1MSAyNC42NyAxNC4wMjYxIDIyLjU0MjkgMTQuMDI2MSAyMi41NDI5QzExLjQ2OTIgMjMuNzAxMyAzLjg0MjQ3IDI2LjcwNDMgMCAyOC4yMDc4VjMwLjI5ODZDMy45NTg5NyAyOC43MjY1IDExLjQ0OTEgMjUuNzU3OCAxMS40MjEgMjUuODIyNEM3LjQyOTg1IDM1LjIwMjcgMTMuOTE5NyAzMy45MTExIDE5Ljk5OTcgMzIuNTUyOUMyMy42MjEzIDMxLjc0NzYgMzAuNDA2NCAzMC4xMTcgMzMuNDAxMiAyOS4zOTQ1VjI3LjI2MzNIMzMuNDAzMloiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=';
+document.getElementById('tl').src=LOGO;
+const SUP={
+ S1:{n:'Hidrobomba Ibèrica',a:'Industrial',cat:'Bombes',lt:7,ok:62,c:'Marta V.',mail:'comandes@hidrobomba.example'},
+ S2:{n:'Valvulat Nord',a:'Industrial',cat:'Vàlvules',lt:10,ok:88,c:'Jordi P.',mail:'vendes@valvulat.example'},
+ S3:{n:'Aerotec Components',a:'Instal·ladors',cat:'Aerotèrmia',lt:21,ok:71,c:'Núria S.',mail:'pedidos@aerotec.example'},
+ S4:{n:'Tubex Sistemes',a:'Instal·ladors',cat:'Tubs i racords',lt:5,ok:94,c:'Pau R.',mail:'logistica@tubex.example'},
+ S5:{n:'Neumàtica del Vallès',a:'Industrial',cat:'Pneumàtica',lt:8,ok:79,c:'Laura M.',mail:'comercial@neumatica.example'},
+ S6:{n:'Compressors Mediterrani',a:'Industrial',cat:'Aire comprimit',lt:28,ok:57,c:'Marta V.',mail:'ventas@compresmed.example'},
+ S7:{n:'Clima Sistemes Iberia',a:'Instal·ladors',cat:'Climatització',lt:14,ok:83,c:'Núria S.',mail:'pedidos@climasis.example'},
+ S8:{n:'Elèctrica Prat',a:'Instal·ladors',cat:'Material elèctric',lt:4,ok:91,c:'Pau R.',mail:'comandes@electricaprat.example'}
+};
+// [id, sup, orderDate, promised, confirmed|null, [[ref,desc,qty,recv]], impact, events[[date,src,text]]]
+const O=[
+['PC-26-0412','S6','2026-10-02','2026-11-06',null,[['CMP-1507','Compressor de cargol 15 kW',2,0]],'Obra industrial · client A (reserva ferma)',[['2026-10-02','ERP','Comanda emesa'],['2026-10-02','Correu','Enviada al proveïdor']]],
+['PC-26-0418','S1','2026-10-20','2026-11-04','2026-11-18',[['BMB-MC-40','Bomba centrífuga multicel·lular',6,0]],'3 comandes de client en espera',[['2026-10-20','ERP','Comanda emesa'],['2026-10-21','Correu','Confirmació: 04/11'],['2026-11-03','Correu','El proveïdor mou la data a 18/11']]],
+['PC-26-0425','S3','2026-10-12','2026-11-09','2026-11-16',[['AER-UE-12','Unitat exterior aerotèrmia 12 kW',4,2],['AER-DI-200','Dipòsit d\'inèrcia 200 l',4,4]],'2 instal·ladors esperen',[['2026-10-12','ERP','Comanda emesa'],['2026-10-14','Correu','Confirmació: 09/11'],['2026-11-09','Magatzem','Recepció parcial: 2 unitats exteriors i 4 dipòsits']]],
+['PC-26-0431','S5','2026-10-26','2026-11-05','2026-11-05',[['NEU-EV-12','Vàlvules solenoides 1/2"',120,120]],'—',[['2026-10-26','ERP','Comanda emesa'],['2026-10-27','Correu','Confirmació: 05/11'],['2026-11-05','Magatzem','Recepció completa']]],
+['PC-26-0433','S2','2026-10-27','2026-11-10','2026-11-10',[['VAL-BO-50','Vàlvula de bola DN50',80,60],['VAL-BO-32','Vàlvula de bola DN32',100,100]],'Estoc mínim en risc (DN50)',[['2026-10-27','ERP','Comanda emesa'],['2026-10-28','Correu','Confirmació: 10/11'],['2026-11-10','Magatzem','Recepció: 60 de 80 en DN50. El proveïdor no ho havia avisat']]],
+['PC-26-0437','S4','2026-11-03','2026-11-14','2026-11-14',[['TUB-ML-20','Tub multicapa 20 mm (rotlle)',150,0]],'—',[['2026-11-03','ERP','Comanda emesa'],['2026-11-04','Correu','Confirmació: 14/11']]],
+['PC-26-0440','S7','2026-11-02','2026-11-13','2026-11-13',[['CLI-SP-35','Split mural 3,5 kW',12,0]],'Reserva de client demà',[['2026-11-02','ERP','Comanda emesa'],['2026-11-03','Correu','Confirmació: 13/11'],['2026-11-13','Transportista','Sortida de ruta: arriba avui']]],
+['PC-26-0442','S8','2026-11-04','2026-11-10','2026-11-10',[['ELE-QD-12','Quadre elèctric 12 mòduls',40,40]],'—',[['2026-11-04','ERP','Comanda emesa'],['2026-11-10','Magatzem','Recepció completa']]],
+['PC-26-0446','S1','2026-11-05','2026-11-19','2026-11-19',[['BMB-GP-2','Grup de pressió doble',3,0]],'—',[['2026-11-05','ERP','Comanda emesa'],['2026-11-06','Correu','Confirmació: 19/11']]],
+['PC-26-0449','S6','2026-11-05','2026-11-12',null,[['CMP-FL-30','Filtre d\'aire comprimit',30,0]],'Manteniment programat 18/11',[['2026-11-05','ERP','Comanda emesa']]],
+['PC-26-0451','S5','2026-11-06','2026-11-20','2026-11-24',[['NEU-CIL-63','Cilindre ISO 15552 Ø63',24,0]],'1 comanda de client',[['2026-11-06','ERP','Comanda emesa'],['2026-11-09','Correu','Confirmació: 24/11 (4 dies més tard)']]],
+['PC-26-0455','S2','2026-11-09','2026-11-23','2026-11-23',[['VAL-RE-32','Vàlvula de retenció DN32',50,0]],'—',[['2026-11-09','ERP','Comanda emesa']]],
+['PC-26-0458','S3','2026-11-09','2026-11-26',null,[['AER-DI-300','Dipòsit d\'inèrcia 300 l',6,0]],'—',[['2026-11-09','ERP','Comanda emesa']]],
+['PC-26-0460','S4','2026-11-06','2026-11-11','2026-11-11',[['RAC-PR-25','Racord de pressió 25 mm',600,600]],'—',[['2026-11-06','ERP','Comanda emesa'],['2026-11-11','Magatzem','Recepció completa']]],
+['PC-26-0463','S7','2026-11-10','2026-11-27','2026-11-27',[['CLI-CC-24','Caldera de condensació 24 kW',5,0]],'—',[['2026-11-10','ERP','Comanda emesa']]],
+['PC-26-0466','S8','2026-11-09','2026-11-13','2026-11-13',[['ELE-CAB-325','Cable manguera 3x2,5 (bobina)',20,12]],'Obra instal·lador demà',[['2026-11-09','ERP','Comanda emesa'],['2026-11-13','Magatzem','Recepció parcial: 12 de 20']]],
+['PC-26-0469','S1','2026-11-11','2026-11-25','2026-11-25',[['BMB-SB-15','Bomba submergible 1,5 kW',4,0]],'—',[['2026-11-11','ERP','Comanda emesa']]],
+['PC-26-0472','S5','2026-11-11','2026-11-24',null,[['NEU-EV-52','Electrovàlvula 5/2',60,0]],'—',[['2026-11-11','ERP','Comanda emesa']]],
+['PC-26-0475','S6','2026-10-14','2026-11-11','2026-12-02',[['CMP-AS-10','Assecador frigorífic',2,0]],'Client industrial B parat',[['2026-10-14','ERP','Comanda emesa'],['2026-11-10','Correu','Confirmació: 02/12 (21 dies de retard)']]],
+['PC-26-0478','S4','2026-11-12','2026-11-18','2026-11-18',[['TUB-CO-40','Collarí i suport (caixa)',40,0]],'—',[['2026-11-12','ERP','Comanda emesa']]]
+].map(r=>({id:r[0],s:r[1],od:r[2],pd:r[3],cd:r[4],L:r[5].map(l=>({ref:l[0],d:l[1],q:l[2],r:l[3]})),imp:r[6],ev:r[7]}));
+// bústia de confirmacions de proveïdors (fictícies) amb diferències detectades
+
+const TODAY=new Date('2026-11-13T09:00:00');
+const fmt=d=>d?new Date(d).toLocaleDateString('ca-ES',{day:'2-digit',month:'2-digit'}):'—';
+const days=(a,b)=>Math.round((new Date(a)-new Date(b))/864e5);
+const eur=n=>n.toLocaleString('ca-ES',{minimumFractionDigits:2})+' €';
+const KIND={date:['Canvi de data','amb'],price:['Canvi de preu','red'],qty:['Quantitat / albarà','amb'],invoice:['Factura','red'],quote:['Alternativa / oferta','blu'],confirm:['Confirmació','grn'],info:['Sense acció','gry']};
+const MAIL=[
+ {id:'m1',o:'PC-26-0418',from:'comandes@hidrobomba.example',when:'13/11 08:12',subj:'Re: PC-26-0418 · canvi de data',body:"Ens veiem obligats a moure l'entrega a 18/11 per manca de motors.",diff:['Data: <s>04/11</s> → <b>18/11</b>'],kind:'date',pr:90,sug:'Hi ha 3 comandes de client en espera. Proposar entrega parcial o una data més propera abans d\'acceptar.'},
+ {id:'m2',o:'PC-26-0451',from:'comercial@neumatica.example',when:'12/11 17:40',subj:'Confirmació comanda PC-26-0451',body:'Confirmem 24 cilindres. Entrega prevista 24/11.',diff:['Data: <s>20/11</s> → <b>24/11</b>','Preu unitari: <s>38,50 €</s> → <b>41,20 €</b> (fictici)'],kind:'price',pr:85,sug:'Canvi de preu +7 % i de data +4 dies a la vegada. No l\'accepteu com a confirmació normal: contraproposeu.'},
+ {id:'m3',o:'PC-26-0475',from:'ventas@compresmed.example',when:'12/11 11:05',subj:'Retraso PC-26-0475',body:'El fabricante retrasa la entrega; nueva fecha 02/12.',diff:['Data: <s>11/11</s> → <b>02/12</b> (+21 dies)','Idioma original: castellà · traduït al català'],kind:'date',pr:95,sug:'Client industrial B ja té el material reservat. Avisar vendes i demanar alternativa d\'stock.'},
+ {id:'m4',o:'PC-26-0433',from:'vendes@valvulat.example',when:'10/11 16:20',subj:'Albarà PC-26-0433',body:'Adjuntem albarà. Enviem 60 u. de DN50; la resta en 10 dies.',diff:['Quantitat DN50: <s>80</s> → <b>60</b> (falten 20)'],kind:'qty',pr:70,sug:'L\'estoc mínim de DN50 queda en risc. Reclamar la resta amb data concreta.'},
+ {id:'m5',o:'PC-26-0460',from:'logistica@tubex.example',when:'13/11 07:48',subj:'Factura F-8841 · PC-26-0460',body:'Adjuntem la factura de la comanda rebuda l\'11/11.',diff:['Import: <s>1.440,00 €</s> → <b>1.482,00 €</b> (+42,00 €)','Línia nova: «Transport» (no consta a la comanda)'],kind:'invoice',pr:60,sug:'La comanda no preveia transport. Demanar abonament o confirmació abans de passar-la a comptabilitat.'},
+ {id:'m6',o:'PC-26-0458',from:'pedidos@aerotec.example',when:'12/11 15:02',subj:'Alternativa dipòsit 300 l',body:'Podem servir el model de 280 l amb entrega anticipada.',diff:['Article: <s>AER-DI-300</s> → <b>AER-DI-280</b>','Data: <s>26/11</s> → <b>19/11</b>'],kind:'quote',pr:45,sug:'Compatible per a 4 de les 6 unitats. Consultar amb l\'oficina tècnica abans d\'acceptar.'},
+ {id:'m7',o:'PC-26-0466',from:'comandes@electricaprat.example',when:'13/11 08:30',subj:'Resta PC-26-0466',body:'Les 8 bobines restants surten demà.',diff:['Resta: 8 bobines · entrega <b>14/11</b>'],kind:'confirm',pr:50,sug:'Cobreix l\'obra de demà. Només cal registrar la recepció quan arribi.'},
+ {id:'m8',o:null,from:'tarifes@tubex.example',when:'11/11 10:12',subj:'Tarifa 2027 · tubs i racords',body:'Adjuntem la nova tarifa vigent a partir de gener.',diff:[],kind:'info',pr:10,sug:'Sense comanda associada. Desar a la fitxa del proveïdor i arxivar.'}
+];
+const DEM=[
+ {id:'d1',c:'Client A (fictici)',art:'Compressor de cargol 15 kW',po:'PC-26-0412',clau:'Reserva ferma',canc:'Cancel·lació sense cost fins 05/10',risc:'Alt',note:'El client va canviar la data dues vegades. Sense clàusula de no-cancel·lació.'},
+ {id:'d2',c:'Instal·lador B (fictici)',art:'Unitat exterior aerotèrmia 12 kW (x2)',po:'PC-26-0425',clau:'Comanda en ferm',canc:'Clàusula de no-cancel·lació signada',risc:'Baix',note:'Rebudes 2 de 4. Pendents 2.'},
+ {id:'d3',c:'Client C (fictici)',art:'Assecador frigorífic',po:'PC-26-0475',clau:'Pressupost acceptat',canc:'Sense clàusula',risc:'Alt',note:'La data del proveïdor passa a 02/12. El client pot anul·lar.'},
+ {id:'d4',c:'Instal·lador D (fictici)',art:'Caldera de condensació 24 kW (x5)',po:'PC-26-0463',clau:'Pressupost obert',canc:'Sense comanda del client',risc:'Mitjà',note:'Comprat contra pressupost. Demanar confirmació en ferm abans de 20/11.'}
+];
+let BASE=JSON.parse(JSON.stringify(O));
+const state={route:'avui',tab:'prov',f:'tots',q:'',buyer:'tots',mf:'pend'};
+let A={};try{A=JSON.parse(localStorage.getItem('daunis-demo-v6')||'{}')}catch{}
+function save(){try{localStorage.setItem('daunis-demo-v6',JSON.stringify(A))}catch{}}
+function ov(){O.forEach((o,i)=>{o.L.forEach((l,j)=>{l.r=BASE[i].L[j].r+(A['rec:'+o.id+':'+l.ref]||0)})})}
+ov();
+function st(o){
+ const full=o.L.every(l=>l.r>=l.q),any=o.L.some(l=>l.r>0);
+ if(full)return{k:'rebut',t:'Rebut',c:'grn'};
+ if(any)return{k:'parcial',t:'Parcial',c:'amb'};
+ if(!o.cd&&days(TODAY,o.pd)>0)return{k:'critica',t:'Venç sense confirmar',c:'red'};
+ if(!o.cd)return{k:'confirmar',t:'Sense confirmar',c:'amb'};
+ if(days(o.cd,o.pd)>0)return{k:'retard',t:'Retard +'+days(o.cd,o.pd)+' d',c:'red'};
+ return{k:'termini',t:'En termini',c:'blu'};
+}
+const $=s=>document.querySelector(s);
+const sup=o=>SUP[o.s];
+const tag=(t,c)=>`<span class="tag t-${c}">${t}</span>`;
+const orderById=id=>O.find(o=>o.id===id);
+const pending=m=>!A['m:'+m.id];
+function flagged(){return O.filter(o=>['critica','confirmar','retard','parcial'].includes(st(o).k))}
+const NAV=[['avui','Avui'],['bustia','Bústia de compres'],['comandes','Comandes'],['mes','Més']];
+function toast(t){const e=$('#toast');e.textContent=t;e.style.display='block';clearTimeout(toast.h);toast.h=setTimeout(()=>e.style.display='none',2600)}
+function nav(){
+ const nb=MAIL.filter(pending).filter(m=>m.kind!=='info').length;
+ $('#side').innerHTML=`<div class="brand"><img src="${LOGO}" alt="Daunis"><small>COMPRES · CAPA SOBRE L'ERP</small></div>`+NAV.map(([k,t])=>`<a class="${state.route===k?'on':''}" onclick="go('${k}')">${t}${k==='bustia'&&nb?`<span class="n">${nb}</span>`:''}</a>`).join('')+`<div class="side-foot"><i></i>ERP: lectura de comandes<br>Última sincronització 13/11 08:55<br><span style="opacity:.8">(simulada)</span><br><br><b>Perfil de demostració</b> · Compres<br><button class="chip" style="margin-top:8px" onclick="resetDemo()">Reinicia dades</button></div>`;
+ $('#mob').innerHTML=NAV.map(([k,t])=>`<a class="${state.route===k?'on':''}" onclick="go('${k}')">${k==='bustia'?'Bústia':t}${k==='bustia'&&nb?` (${nb})`:''}</a>`).join('');
+}
+function go(r,x){state.route=r;if(x)Object.assign(state,x);render();window.scrollTo(0,0)}
+function resetDemo(){A={};save();ov();render();toast('Dades de la demo restablertes')}
+function render(){ov();nav();({avui:vAvui,bustia:vBustia,comandes:vComandes,mes:vMes})[state.route]();}
+/* ---------- AVUI ---------- */
+function vAvui(){
+ const fl=flagged(),mp=MAIL.filter(pending).filter(m=>m.kind!=='info');
+ const k=(n,t,c,fn)=>`<div class="card kpi ${c}" onclick="${fn}"><b>${n}</b><span>${t}</span></div>`;
+ const rows=[];
+ mp.forEach(m=>rows.push({pr:m.pr,c:m.kind==='confirm'?'blu':(m.pr>=80?'red':'amb'),h:`${m.subj}`,s:`${KIND[m.kind][0]} · ${m.from}`,sug:m.sug,go:`openMail('${m.id}')`,src:'Correu'}));
+ fl.forEach(o=>{const s=st(o);if(mp.some(m=>m.o===o.id))return;const pr={critica:100,retard:75,parcial:55,confirmar:40}[s.k];
+  rows.push({pr,c:s.c==='red'?'red':'amb',h:`${o.id} · ${sup(o).n}`,s:`${s.t}${o.imp!=='—'?' · '+o.imp:''}`,sug:s.k==='critica'?'Cap confirmació i la data ja ha passat. Preparar reclamació.':s.k==='confirmar'?'Encara sense confirmació. Demanar-la abans que venci.':s.k==='parcial'?'Recepció parcial. Reclamar el pendent amb data.':'Retard acceptat sense avisar vendes.',go:`openOrder('${o.id}')`,src:'ERP'})});
+ rows.sort((a,b)=>b.pr-a.pr);
+ $('#view').innerHTML=`<h1>Avui</h1><div class="sub">Divendres 13 de novembre · el que demana la teva atenció, ordenat per urgència</div>
+ <div class="grid k4" style="margin-bottom:14px">${k(fl.filter(o=>st(o).k==='critica').length,'Venç sense confirmar','bad',"go('comandes',{f:'critica'})")}${k(fl.filter(o=>st(o).k==='retard').length,'Retards acceptats','bad',"go('comandes',{f:'retard'})")}${k(fl.filter(o=>st(o).k==='parcial').length,'Recepcions parcials','warn',"go('comandes',{f:'parcial'})")}${k(mp.length,'Correus per revisar','',"go('bustia')")}</div>
+ <div class="grid two"><div class="card"><h2>Cua de feina</h2>${rows.slice(0,9).map(r=>`<div class="item" onclick="${r.go}"><span class="dot d-${r.c==='red'?'red':r.c==='blu'?'blu':'amb'}"></span><div class="b"><b>${r.h}</b><span class="src">${r.src}</span><div class="small mut">${r.s}</div><div class="small" style="margin-top:3px">→ ${r.sug}</div></div></div>`).join('')}</div>
+ <div class="card"><h2>Què fa aquesta capa</h2><p class="small">No substitueix l'ERP. Llegeix les comandes i el correu de compres, els creua i et deixa només el que cal decidir.</p><ul class="small" style="padding-left:18px;margin:8px 0"><li>Classifica cada correu del proveïdor i el lliga a la comanda.</li><li>Detecta què ha canviat: data, preu, quantitat, import de factura.</li><li>Prepara el missatge. Tu el revises i l'envies.</li><li>Segueix el que falta per línia fins que arriba.</li></ul><div class="sugg small">Les accions d'aquesta demo es queden al teu navegador. No s'envia res ni s'escriu a cap sistema.</div></div></div>`;
+}
+/* ---------- BUSTIA ---------- */
+function vBustia(){
+ const list=MAIL.filter(m=>state.mf==='tots'||(state.mf==='pend'?pending(m):!pending(m)));
+ $('#view').innerHTML=`<h1>Bústia de compres</h1><div class="sub">Correus de proveïdors classificats i lligats a la comanda</div>
+ <div class="tools">${[['pend','Per revisar'],['fet','Resolts'],['tots','Tots']].map(([k,t])=>`<button class="chip ${state.mf===k?'on':''}" onclick="state.mf='${k}';render()">${t}</button>`).join('')}</div>
+ <div class="card">${list.length?list.map(m=>`<div class="item" onclick="openMail('${m.id}')"><span class="dot d-${pending(m)?(m.pr>=80?'red':m.pr>=40?'amb':'gry'):'grn'}"></span><div class="b"><b>${m.subj}</b> ${tag(KIND[m.kind][0],KIND[m.kind][1])}<div class="small mut">${m.from} · ${m.when}${m.o?' · '+m.o:''}</div>${m.diff.length?`<div class="diff">${m.diff.join('<br>')}</div>`:''}${A['m:'+m.id]?`<div class="small" style="margin-top:6px">✔ ${A['m:'+m.id].t}</div>`:''}</div></div>`).join(''):'<p class="mut">Res per mostrar.</p>'}</div>`;
+}
+function draftFor(m){
+ const o=m.o&&orderById(m.o),s=o?sup(o):null,c=s?s.c:'';
+ const hi=`Hola ${c||''},\n\n`,fi=`\n\nGràcies,\nCompres · Daunis\n(esborrany de demostració, no enviat)`;
+ if(m.kind==='date')return hi+`Hem rebut el canvi de data de la comanda ${m.o}. Tenim comandes de client esperant aquest material. Podeu servir una part abans, o confirmar per escrit la data més propera possible?`+fi;
+ if(m.kind==='price')return hi+`Sobre la comanda ${m.o}: el preu confirmat no coincideix amb el de la comanda i la data s'allarga 4 dies. Podeu mantenir el preu de la comanda i la data original?`+fi;
+ if(m.kind==='qty')return hi+`L'albarà de ${m.o} indica 60 unitats de DN50 en lloc de 80. Podeu confirmar la data exacta de les 20 restants?`+fi;
+ if(m.kind==='invoice')return hi+`La factura F-8841 de ${m.o} inclou 42,00 € de transport que no consta a la comanda. Podeu enviar l'abonament o indicar on es va pactar?`+fi;
+ if(m.kind==='quote')return hi+`Sobre l'alternativa per a ${m.o}: abans de decidir necessitem la fitxa tècnica del model de 280 l. Hi ha disponibilitat per a les 6 unitats?`+fi;
+ return hi+`Rebut, gràcies.`+fi;
+}
+function openMail(id){
+ const m=MAIL.find(x=>x.id===id),o=m.o&&orderById(m.o),done=A['m:'+id];
+ const d=(done&&done.txt)||draftFor(m);
+ $('#pn').innerHTML=`<button class="x" onclick="closeD()">×</button><h2>${m.subj}</h2><div class="small mut">${m.from} · ${m.when}</div>
+ <p style="margin:10px 0">${m.body}</p>${m.diff.length?`<div class="diff">${m.diff.join('<br>')}</div>`:''}
+ <div class="sugg"><b>Proposta:</b> ${m.sug}</div>
+ ${o?`<div class="kv"><div>Comanda</div><div><a href="#" onclick="openOrder('${o.id}');return false" class="mono">${o.id}</a> · ${sup(o).n}</div><div>Impacte</div><div>${o.imp}</div><div>Estat</div><div>${tag(st(o).t,st(o).c)}</div></div>`:''}
+ ${m.kind==='info'?'':`<h3 style="font-size:13px;color:var(--navy);margin:12px 0 4px">Esborrany de resposta (editable)</h3><textarea id="dtxt">${d}</textarea>`}
+ <div class="act">${m.kind==='info'?`<button class="btn" onclick="decide('${id}','Arxivat a la fitxa del proveïdor')">Arxivar</button>`:`<button class="btn" onclick="decide('${id}','Resposta desada com a esborrany',true)">Desa l'esborrany</button><button class="btn ghost" onclick="decide('${id}','Canvi acceptat (registre local)')">Accepta el canvi</button><button class="btn ghost" onclick="decide('${id}','Contraproposta preparada',true)">Contraproposa</button><button class="btn ghost" onclick="navigator.clipboard&&navigator.clipboard.writeText($('#dtxt').value);toast('Text copiat')">Copia</button>`}</div>
+ <p class="small mut" style="margin-top:10px">Cap botó envia res. Decidir només queda registrat en aquest navegador.</p>`;
+ $('#dr').classList.add('on');
+}
+function decide(id,t,txt){A['m:'+id]={t,txt:txt&&$('#dtxt')?$('#dtxt').value:undefined};save();closeD();render();toast(t)}
+function closeD(){$('#dr').classList.remove('on')}
+/* ---------- COMANDES ---------- */
+function vComandes(){
+ const F=[['tots','Totes'],['critica','Venç sense confirmar'],['confirmar','Sense confirmar'],['retard','Retard'],['parcial','Parcial'],['termini','En termini'],['rebut','Rebudes']];
+ const bs=[...new Set(Object.values(SUP).map(s=>s.c))];
+ const q=state.q.toLowerCase();
+ const L=O.filter(o=>(state.f==='tots'||st(o).k===state.f)&&(state.buyer==='tots'||sup(o).c===state.buyer)&&(!q||(o.id+sup(o).n+o.L.map(l=>l.ref+l.d).join()).toLowerCase().includes(q)));
+ $('#view').innerHTML=`<h1>Comandes</h1><div class="sub">Lectura de l'ERP, amb l'estat creuat amb el correu</div>
+ <div class="tools"><input type="search" id="qq" placeholder="Cerca comanda, proveïdor o article" value="${state.q}" oninput="state.q=this.value;vComandes2()"><select onchange="state.buyer=this.value;render()"><option value="tots">Tots els compradors</option>${bs.map(b=>`<option ${state.buyer===b?'selected':''}>${b}</option>`).join('')}</select></div>
+ <div class="tools">${F.map(([k,t])=>`<button class="chip ${state.f===k?'on':''}" onclick="state.f='${k}';render()">${t}</button>`).join('')}</div>
+ <div class="card tw"><table><thead><tr><th>Comanda</th><th>Proveïdor</th><th class="hide-m">Comprador</th><th>Prometuda</th><th class="hide-m">Confirmada</th><th>Estat</th><th class="hide-m">Rebut</th></tr></thead><tbody id="tb">${rowsC(L)}</tbody></table></div>`;
+}
+function rowsC(L){return L.map(o=>{const s=st(o),qt=o.L.reduce((a,l)=>a+l.q,0),rc=o.L.reduce((a,l)=>a+l.r,0);return `<tr class="row" onclick="openOrder('${o.id}')"><td class="mono">${o.id}</td><td>${sup(o).n}</td><td class="hide-m">${sup(o).c}</td><td>${fmt(o.pd)}</td><td class="hide-m">${fmt(o.cd)}</td><td>${tag(s.t,s.c)}</td><td class="hide-m"><div class="bar"><i style="width:${Math.round(100*rc/qt)}%"></i></div></td></tr>`}).join('')||'<tr><td colspan=7 class="mut">Cap resultat</td></tr>'}
+function vComandes2(){const q=state.q.toLowerCase();const L=O.filter(o=>(state.f==='tots'||st(o).k===state.f)&&(state.buyer==='tots'||sup(o).c===state.buyer)&&(!q||(o.id+sup(o).n+o.L.map(l=>l.ref+l.d).join()).toLowerCase().includes(q)));$('#tb').innerHTML=rowsC(L)}
+function openOrder(id){
+ const o=orderById(id),s=st(o),su=sup(o);
+ const cl=A['c:'+id];
+ $('#pn').innerHTML=`<button class="x" onclick="closeD()">×</button><h2 class="mono" style="font-size:17px">${o.id}</h2><div>${su.n} ${tag(s.t,s.c)}</div>
+ <div class="kv"><div>Comprador</div><div>${su.c}</div><div>Prometuda</div><div>${fmt(o.pd)}</div><div>Confirmada</div><div>${o.cd?fmt(o.cd):'Sense confirmar'}</div><div>Impacte</div><div>${o.imp}</div></div>
+ <h3 style="font-size:13px;color:var(--navy)">Línies</h3><div class="tw"><table><thead><tr><th>Ref.</th><th>Descripció</th><th>Dem.</th><th>Rebut</th><th></th></tr></thead><tbody>${o.L.map(l=>`<tr><td class="mono">${l.ref}</td><td>${l.d}</td><td>${l.q}</td><td>${l.r}</td><td>${l.r<l.q?`<button class="chip" onclick="recv('${o.id}','${l.ref}')">Recepció</button>`:'✔'}</td></tr>`).join('')}</tbody></table></div>
+ <h3 style="font-size:13px;color:var(--navy);margin-top:14px">Historial</h3><ul class="tl">${o.ev.map(e=>`<li><b>${fmt(e[0])}</b> <span class="src">${e[1]}</span> ${e[2]}</li>`).join('')}${(A['ev:'+id]||[]).map(e=>`<li><b>13/11</b> <span class="src">Demo</span> ${e}</li>`).join('')}</ul>
+ <div class="act">${s.k!=='rebut'?`<button class="btn" onclick="claim('${o.id}')">Prepara reclamació</button>`:''}</div>
+ ${cl?`<h3 style="font-size:13px;color:var(--navy)">Reclamació (editable, no enviada)</h3><textarea id="ctxt">${cl}</textarea><div class="act"><button class="btn ghost" onclick="A['c:${id}']=$('#ctxt').value;save();toast('Esborrany desat')">Desa</button><button class="btn ghost" onclick="navigator.clipboard&&navigator.clipboard.writeText($('#ctxt').value);toast('Text copiat')">Copia</button></div>`:''}`;
+ $('#dr').classList.add('on');
+}
+function claim(id){const o=orderById(id),su=sup(o);const p=o.L.filter(l=>l.r<l.q).map(l=>`- ${l.ref} ${l.d}: ${l.q-l.r} pendents`).join('\n');
+ A['c:'+id]=`Hola ${su.c},\n\nSobre la comanda ${o.id}, prometuda per al ${fmt(o.pd)}${o.cd?` i confirmada per al ${fmt(o.cd)}`:' (no consta confirmació)'}:\n${p}\n\nPodeu confirmar per escrit la data d'entrega? Hi ha ${o.imp==='—'?'comandes':'compromisos'} que en depenen.\n\nGràcies,\nCompres · Daunis\n(esborrany de demostració, no enviat)`;save();openOrder(id)}
+function recv(id,ref){const o=orderById(id),l=o.L.find(x=>x.ref===ref);const alb=prompt('Núm. d\'albarà (de mostra, p. ex. ALB-7731)','ALB-7731');if(!alb)return;const n=parseInt(prompt(`Unitats rebudes de ${ref} (pendents: ${l.q-l.r})`,String(l.q-l.r)),10);if(!(n>0)||n>l.q-l.r){toast('Quantitat no vàlida');return}
+ A['rec:'+id+':'+ref]=(A['rec:'+id+':'+ref]||0)+n;(A['ev:'+id]=A['ev:'+id]||[]).push(`Recepció registrada: ${n} u. de ${ref} (${alb})`);save();ov();render();openOrder(id)}
+/* ---------- MES ---------- */
+function vMes(){
+ const T=[['prov','Proveïdors'],['dem','Sota comanda del client'],['abast','Abast i fonts']];
+ $('#view').innerHTML=`<h1>Més</h1><div class="sub">Segon nivell: el detall que no cal tenir a la vista cada dia</div><div class="tabs">${T.map(([k,t])=>`<button class="${state.tab===k?'on':''}" onclick="state.tab='${k}';render()">${t}</button>`).join('')}</div><div id="tabc"></div>`;
+ $('#tabc').innerHTML=({prov:tProv,dem:tDem,abast:tAbast})[state.tab]();
+}
+function tProv(){return `<div class="card tw"><table><thead><tr><th>Proveïdor</th><th>Àrea</th><th class="hide-m">Termini hab.</th><th>Puntualitat (fictícia)</th><th>Obertes</th></tr></thead><tbody>${Object.entries(SUP).map(([k,s])=>{const n=O.filter(o=>o.s===k&&st(o).k!=='rebut').length;return `<tr><td><b>${s.n}</b><div class="small mut">${s.cat} · ${s.c}</div></td><td>${s.a}</td><td class="hide-m">${s.lt} d</td><td><div class="bar"><i style="width:${s.ok}%"></i></div><span class="small">${s.ok} %</span></td><td>${n}</td></tr>`}).join('')}</tbody></table></div><p class="small mut">Proveïdors i indicadors inventats per a la demo.</p>`}
+function tDem(){return `<div class="card"><h2>Compres lligades a una venda concreta</h2><p class="small mut">Articles que no són en estoc i es busquen per a un client. Si el client anul·la, la compra ja feta es queda a Daunis.</p>${DEM.map(d=>`<div class="item" style="cursor:default"><span class="dot d-${d.risc==='Alt'?'red':d.risc==='Mitjà'?'amb':'grn'}"></span><div class="b"><b>${d.art}</b> ${tag('Risc '+d.risc.toLowerCase(),d.risc==='Alt'?'red':d.risc==='Mitjà'?'amb':'grn')}<div class="small mut">${d.c} · ${d.clau} · <a href="#" class="mono" onclick="openOrder('${d.po}');return false">${d.po}</a></div><div class="small">${d.canc}. ${d.note}</div></div></div>`).join('')}<p class="small mut">Clients fictis. Dades inventades.</p></div>`}
+function tAbast(){return `<div class="grid two"><div class="card"><h2>Què llegeix i què no toca</h2><ul class="small" style="padding-left:18px"><li><b>Llegeix:</b> comandes obertes i línies de l'ERP, correu de la bústia de compres.</li><li><b>Prepara:</b> esborranys de resposta i de reclamació, sempre per revisar.</li><li><b>No fa:</b> enviar correus, modificar comandes, canviar preus ni escriure a l'ERP.</li><li>Les decisions queden registrades a l'eina fins que algú les porti a l'ERP.</li></ul></div><div class="card"><h2>Context públic de Daunis</h2><ul class="small src-list" style="padding-left:18px"><li>Distribuïdor industrial i per a instal·ladors. Terrassa i Sabadell. <a href="https://www.daunis.es/" target="_blank" rel="noopener">daunis.es</a></li><li>Més de 300 marques i 50.000 referències (fitxa pública de la botiga de Sabadell). <a href="https://sainfo.es/barcelona/sabadell/daunis-sabadell/" target="_blank" rel="noopener">font</a></li><li>Entrega en menys de 24 h a la seva ruta. <a href="https://www.daunis.es/fontaneria" target="_blank" rel="noopener">font</a></li><li>Entrevista a la direcció general (2024). <a href="https://www.diarideterrassa.com/economia/2024/03/17/no-volem-creixer-de-qualsevol-manera-ni-preu/" target="_blank" rel="noopener">Diari de Terrassa</a></li></ul><p class="small mut">Demo independent: no és un producte oficial de Daunis. Logotip de daunis.es, usat només per a aquesta presentació.</p></div></div>`}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeD()});
+$('#dr').addEventListener('click',e=>{if(e.target.id==='dr')closeD()});
+render();
+
+</script></body></html>
