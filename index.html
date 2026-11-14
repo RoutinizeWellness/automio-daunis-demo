@@ -69,7 +69,7 @@ td,th{padding:8px 5px}}
 @media(max-width:900px){.topbar .pill{display:inline-block;font-size:9px;padding:3px 7px;white-space:nowrap}.topbar .version{display:none}.topbar #tl{height:25px;width:128px}.apcontrols{gap:7px}.apcontrols .mxbtn{padding:8px 10px;font-size:12px}.apcontrols .mxmeta{font-size:10px}.aphero{padding:19px}.aphero h1{font-size:26px}.aphero p{font-size:13px}.apdemof{align-items:flex-start;font-size:11px}}
 </style></head><body>
 <div class="app"><aside id="side"></aside><main>
-<div class="topbar"><img id="tl" alt="Daunis"><span class="version">AUTOMIO · COMPRES v18</span><span class="sp"></span><span class="pill">DEMO · DADES FICTÍCIES</span></div>
+<div class="topbar"><img id="tl" alt="Daunis"><span class="version">AUTOMIO · COMPRES v19</span><span class="sp"></span><span class="pill">DEMO · DADES FICTÍCIES</span></div>
 
 <div id="view"></div></main></div>
 <nav class="mob" id="mob"></nav><div class="drawer" id="dr"><div class="panel" id="pn"></div></div><div class="toast" id="toast"></div>
@@ -518,5 +518,74 @@ const resetBeforeAP11=resetDemo;resetDemo=function(){clearTimeout(AP.timer);rese
 // The routine continues in this page while the user inspects the mailbox. No network writes.
 if(new URLSearchParams(location.search).get('view')!=='outlook'){go('autopilot')}else{nav()}
 if(!AP.finished&&!new URLSearchParams(location.search).has('manual'))AP.timer=setTimeout(apTick,1400);
+</script>
+<style id="v19-style">
+:root{--bg:#f5f6fa;--ink:#16233b;--navy:#16233b;--red:#e2241d;--line:#e8ebf2}
+body{background:var(--bg)}
+aside{border-right:0;box-shadow:1px 0 0 var(--line)}
+aside a{border-left:0;border-radius:10px;color:#4a5670;font-weight:500}
+aside a.on{background:#fdecea;color:var(--red);font-weight:700}
+.topbar{border-bottom:0;box-shadow:0 1px 0 var(--line)}
+.card,.apcard,.mxpanel{border:0!important;border-radius:16px!important;box-shadow:0 1px 2px rgba(22,35,59,.05),0 6px 18px rgba(22,35,59,.04)}
+h1{color:var(--ink);letter-spacing:-.01em}
+.v19h{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.v19h h1{font-size:28px;line-height:1.1}.v19h p{margin:6px 0 0;color:#667085;font-size:14px}
+.v19live{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:#17663a;background:#e4f5ea;border-radius:99px;padding:5px 11px;margin-bottom:8px}
+.v19live i{width:7px;height:7px;border-radius:50%;background:#1f9d55;animation:v19p 1.6s infinite}
+.v19live.off{color:#667085;background:#eceff5}.v19live.off i{background:#98a2b3;animation:none}
+@keyframes v19p{50%{opacity:.3}}
+.v19btns{display:flex;gap:8px}
+.v19b{border:0;border-radius:10px;padding:10px 16px;font:600 13px inherit;font-family:inherit;cursor:pointer;background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px #dde2ec;min-height:42px}
+.v19b.p{background:var(--red);color:#fff;box-shadow:none}
+.v19seg{display:flex;gap:3px;margin-bottom:18px}.v19seg i{flex:1;height:6px;border-radius:3px;background:#e1e5ee}
+.v19seg i.a{background:#16233b}.v19seg i.r{background:#f0b429}.v19seg i.g{background:#8fd0aa}
+.v19grid{display:grid;grid-template-columns:1.55fr 1fr;gap:18px}
+.v19card{background:#fff;border-radius:16px;padding:22px;box-shadow:0 1px 2px rgba(22,35,59,.05),0 6px 18px rgba(22,35,59,.04)}
+.v19card h2{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#7a869c;margin:0 0 16px;font-weight:700}
+.v19st{display:flex;align-items:flex-start;margin:4px 0 20px}
+.v19st div{flex:1;text-align:center;position:relative;font-size:11px;color:#98a2b3}
+.v19st div:before{content:"";position:absolute;top:13px;left:-50%;width:100%;height:2px;background:#e1e5ee}
+.v19st div:first-child:before{display:none}
+.v19st b{position:relative;z-index:1;display:grid;place-items:center;width:28px;height:28px;margin:0 auto 7px;border-radius:50%;background:#e9ecf3;color:#98a2b3;font-size:12px}
+.v19st .d b{background:#16233b;color:#fff}.v19st .d{color:#16233b}.v19st .d:before{background:#16233b}
+.v19st .c b{background:var(--red);color:#fff;box-shadow:0 0 0 5px #fdecea}.v19st .c{color:var(--red);font-weight:700}.v19st .c:before{background:#16233b}
+.v19mail{display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:12px;background:#f6f8fc}
+.v19mail em{font-style:normal;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#16233b;color:#fff;font-weight:700;flex:none}
+.v19mail small{color:#7a869c;font-size:12px}.v19mail h3{margin:2px 0 6px;font-size:16px;color:var(--ink)}.v19mail p{margin:0;color:#4a5670;font-size:13px;line-height:1.55}
+.v19res{margin-top:14px;font-size:13px;color:#4a5670;line-height:1.55}
+.v19link{background:none;border:0;color:var(--red);font:600 13px inherit;font-family:inherit;cursor:pointer;padding:10px 0 0}
+.v19don{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.v19don svg{width:150px;height:150px;flex:none}
+.v19leg{display:grid;gap:10px;font-size:13px;color:#4a5670}.v19leg div{display:flex;align-items:center;gap:9px}.v19leg i{width:10px;height:10px;border-radius:3px}.v19leg b{margin-left:auto;padding-left:14px;color:var(--ink)}
+.v19ex{margin-top:18px}.v19ex h2{display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#7a869c;font-weight:700;margin:0 0 12px}
+.v19exg{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.v19e{background:#fff;border-radius:14px;padding:16px 18px;box-shadow:0 1px 2px rgba(22,35,59,.05),0 6px 18px rgba(22,35,59,.04);border-left:5px solid #f0b429;cursor:pointer;text-align:left;border-top:0;border-right:0;border-bottom:0;font-family:inherit;display:block;width:100%}
+.v19e.red{border-left-color:var(--red)}.v19e.green{border-left-color:#3aa66b}.v19e.blue{border-left-color:#3b6fd0}
+.v19e span{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7a869c}
+.v19e h3{margin:5px 0;font-size:15px;color:var(--ink)}.v19e p{margin:0;font-size:13px;color:#4a5670;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.v19none{background:#fff;border-radius:14px;padding:26px;color:#667085;text-align:center;font-size:14px}
+.v19more{margin-top:18px}.v19more summary{cursor:pointer;color:#667085;font-size:13px;padding:10px 0}
+.v19more .feed{list-style:none;padding:0;margin:0;font-size:13px;color:#4a5670}.v19more .feed li{padding:10px 0;border-bottom:1px solid var(--line)}.v19more .feed b{color:var(--ink);display:block}
+.v19more p{font-size:13px;color:#667085;line-height:1.6;max-width:760px}
+.kpi b,.apkpi b{color:var(--red)}
+.tag{border-radius:99px}
+.cmdbar{display:flex;height:10px;border-radius:5px;overflow:hidden;gap:3px;margin:4px 0 12px}.cmdbar i{display:block;height:100%}
+.cmdleg{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:#4a5670;margin-bottom:18px}.cmdleg span{display:flex;align-items:center;gap:7px}.cmdleg i{width:9px;height:9px;border-radius:3px;display:inline-block}
+.cmdsum{background:#fff;border-radius:16px;padding:20px 22px;margin-bottom:16px;box-shadow:0 1px 2px rgba(22,35,59,.05),0 6px 18px rgba(22,35,59,.04)}
+.cmdsum big{font-size:30px;font-weight:700;color:var(--ink)}.cmdsum big small{font-size:13px;color:#7a869c;font-weight:500;margin-left:8px}
+@media(max-width:900px){.v19grid{grid-template-columns:1fr}.v19exg{grid-template-columns:1fr}}
+@media(max-width:700px){.v19h h1{font-size:25px}.v19btns{width:100%}.v19btns .v19b{flex:1}.v19card{padding:18px}.v19st div{font-size:10px}.v19st b{width:26px;height:26px}.v19don{justify-content:center}.v19mail{padding:14px}}
+</style>
+<script id="v19">
+function v19ring(parts){const T=parts.reduce((a,p)=>a+p[1],0)||1,R=54,C=2*Math.PI*R;let off=0;return `<svg viewBox="0 0 140 140"><circle cx="70" cy="70" r="${R}" fill="none" stroke="#eceff5" stroke-width="16"/>${parts.map(p=>{const l=C*p[1]/T,s=p[1]?`<circle cx="70" cy="70" r="${R}" fill="none" stroke="${p[2]}" stroke-width="16" stroke-dasharray="${l} ${C-l}" stroke-dashoffset="${-off}" transform="rotate(-90 70 70)"/>`:'';off+=l;return s}).join('')}<text x="70" y="68" text-anchor="middle" font-size="28" font-weight="700" fill="#16233b">${T===1&&!parts[0][1]?0:parts.reduce((a,p)=>a+p[1],0)}</text><text x="70" y="86" text-anchor="middle" font-size="10" fill="#7a869c">correus</text></svg>`}
+vAutopilot11=function(){const m=MX.mail.find(x=>x.id===AP.latest),e=AP.events.at(-1);const EXI=['x1','x3','x4','x5','x7','x11','x6','x9'],rank=['x9','x4','x3','x1','x5','x6','x7','x11'];const ex=MX.mail.filter(x=>EXI.includes(x.id)&&x.processed).sort((a,b)=>rank.indexOf(a.id)-rank.indexOf(b.id));const auto=(MX.mail.find(x=>x.id==='x2')?.ack?1:0)+(MX.mail.find(x=>x.id==='x8')?.processed?1:0);const wait=10-auto-ex.length;const stages=['arrive','link','extract','check','write','reply'],names=['Correu','Vinculació','Lectura','Regles','ERP fictici','Resposta'],ix=AP.finished?6:stages.indexOf(AP.phase);const seg=APPLAN.map((p,i)=>`<i class="${i<AP.cursor?(p[1]==='review'?'r':p[1]==='duplicate'||p[1]==='verify'||p[1]==='reply'||p[1]==='write'?'g':'a'):''}"></i>`).join('');const st=AP.finished?['Mostra completada',0]:AP.paused?['En pausa',1]:['En marxa',0];
+document.querySelector('#view').innerHTML=`<div class="v19h"><div><span class="v19live ${AP.paused||AP.finished?'off':''}"><i></i>${st[0]}</span><h1>Autopilot</h1><p>Correu, comanda i document contrastats. Tu només decideixes les excepcions.</p></div><div class="v19btns"><button class="v19b" onclick="apPause()" ${AP.finished?'disabled':''}>${AP.paused?'Reprendre':'Pausa'}</button><button class="v19b p" onclick="go('outlook')">Obrir Outlook</button></div></div>
+<div class="v19seg" title="${AP.cursor} de ${APPLAN.length} passos">${seg}</div>
+<div class="v19grid"><section class="v19card"><h2>Ara mateix</h2><div class="v19st">${names.map((v,i)=>`<div class="${ix>i?'d':ix===i?'c':''}"><b>${ix>i?'✓':i+1}</b>${v}</div>`).join('')}</div>${e?`<div class="v19mail"><em>${mxEscape((m.name||'?').trim()[0])}</em><div><small>${mxEscape(m.name)}</small><h3>${mxEscape(m.subject)}</h3><p>${mxEscape(e.text)}</p></div></div><button class="v19link" onclick="apOpen('${m.id}')">Veure fil, document i traça →</button>`:`<div class="v19mail"><div><h3>Esperant el primer correu</h3><p>La mostra comença sola.</p></div></div>`}</section>
+<section class="v19card"><h2>Correus de la mostra</h2><div class="v19don">${v19ring([['auto',auto,'#3aa66b'],['ex',ex.length,'#f0b429'],['w',wait,'#d5dae5']])}<div class="v19leg"><div><i style="background:#3aa66b"></i>Resolts sense persona<b>${auto}</b></div><div><i style="background:#f0b429"></i>Cal una persona<b>${ex.length}</b></div><div><i style="background:#d5dae5"></i>Encara no arribats<b>${wait}</b></div></div></div></section></div>
+<section class="v19ex"><h2><span>Cal una persona</span><span>${ex.length}</span></h2>${ex.length?`<div class="v19exg">${ex.map(x=>`<button class="v19e ${x.tone||''}" onclick="apOpen('${x.id}')"><span>${mxEscape(x.label)}</span><h3>${mxEscape(x.order||'Sense comanda segura')} · ${mxEscape(x.name)}</h3><p>${mxEscape(x.finding)}</p></button>`).join('')}</div>`:`<div class="v19none">Cap excepció per ara. Un preu fora de regla o un albarà incomplet apareixeran aquí.</div>`}</section>
+<details class="v19more"><summary>Activitat i abast de la mostra</summary><ol class="feed">${AP.events.slice().reverse().map(x=>`<li><b>${mxEscape(x.title)}</b>${mxEscape(x.text)}</li>`).join('')||'<li>Encara sense accions.</li>'}</ol><p>Mostra amb dades fictícies, sense IA ni connexions reals. En producció caldria un procés independent del navegador, permisos de bústia i ERP aprovats, i decidir amb IT la lectura de documents. Les regles i toleràncies les ha d'aprovar Daunis.</p><button class="v19b" onclick="apRestartAsk()">Tornar a veure-ho</button></details>`}
+const v19ComBase=vComandes;vComandes=function(){v19ComBase();const c={},K={};O.forEach(o=>{const s=st(o);c[s.k]=(c[s.k]||0)+1;K[s.k]=s});const col={critica:'#e2241d',confirmar:'#e2241d',retard:'#f0b429',parcial:'#f0b429',termini:'#3b6fd0',rebut:'#3aa66b'};const LB={critica:'Venç sense confirmar',confirmar:'Sense confirmar',retard:'Amb retard',parcial:'Parcials',termini:'En termini',rebut:'Rebudes'};const ks=['critica','confirmar','retard','parcial','termini','rebut'].filter(k=>c[k]);const bar=`<div class="cmdsum"><big>${O.length}<small>comandes de mostra</small></big><div class="cmdbar">${ks.map(k=>`<i style="flex:${c[k]};background:${col[k]||'#98a2b3'}"></i>`).join('')}</div><div class="cmdleg">${ks.map(k=>`<span><i style="background:${col[k]||'#98a2b3'}"></i>${LB[k]} · ${c[k]}</span>`).join('')}</div></div>`;const t=document.querySelector('#view .tools');if(t)t.insertAdjacentHTML('beforebegin',bar)};
+render();
 </script>
 </body></html>
